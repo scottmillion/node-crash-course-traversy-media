@@ -1,0 +1,44 @@
+NPM - Default Node Package Managers
+Installs 3rd party packages (frameworks, libraries, tools, etc.)
+Packages get stored in the node_modules folder
+All dependencies are listed in a package.json file
+NPM scripts can be created to run certain tasks such as a server.
+
+Common Commands
+npm init | generates a package.json file
+npm install express | installs a package locally (in this case 'express')
+npm install -g nodemon | installs a package globally (in this case 'nodemon')
+
+
+Node Core Modules (path, fs, http, etc)
+3rd Party modules / packages installed via NPM
+Custom modules (files)
+const path = require('path');
+const myFile = require('./myFile');
+
+You can use terminal to do:
+node --version | npm --version
+type 'node' in consule and you can type javascript!
+.exit to exit
+type node filename.js to run file!
+
+In VS Code:
+
+Open a blank folder.
+Run npm init | creates package.json file (this is required for any package dependencies you install from npm. That way if you go to another computer you can run 'npm install' and it will install all the packages you need to make everything work.) Also creates a package-lock.json file which will store version and location of your packages.
+
+Example) install uuid (generates random usernames and passwords)
+
+npm install uuid (note that it addes a dependencies object to package.json file)
+
+Example for a dev dependency (something you just use for development) nodemon (makes it live server so you don't need to keep refreshing).
+
+npm install --save-dev nodemon OR npm install -D nodemon (adds a devDependendies object to .json)
+
+----------
+Notice you have a node_modules folder now with all your dependencies / dev dependencies. When you deploy or move your app to another computer, you should not include node_modules because your pack.json file will tell the server / computer what needs to be installed when you type "npm install" there.
+----------
+
+Create your main file (index.js / app.js... whatever you set before)
+
+
